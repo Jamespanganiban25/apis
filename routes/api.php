@@ -18,11 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
 Route::group(['middleware' => 'auth:api'],function(){
-
-//Route::post('details', 'API\UserController@details');
 Route::post('order', 'API\ProductController@order');
-
-/*
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();*/
 });
+
