@@ -67,11 +67,6 @@ public $createSuccess = 201;
                 $success['message'] = 'User successfully Registered';
                 return response()->json($success, $this-> createSuccess); 
 
-            }
+    }
 
-    public function details() 
-    { 
-        $user = Auth::user(); 
-        return response()->json(['success' => $user], $this-> successStatus); 
-    } 
 }
